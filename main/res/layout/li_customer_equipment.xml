@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:descendantFocusability="blocksDescendants"
+             android:minHeight="?android:attr/listPreferredItemHeight">
+
+    <FrameLayout
+        android:id="@+id/choice_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/swipe_to_dismiss_bg"
+        android:visibility="gone">
+
+        <com.skeds.android.phone.business.ui.view.EnlargedButton
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="right|center"
+            android:background="@drawable/btn_equipment_delete"/>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/swiping_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/Skeds.TextView.Equipment.Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <TextView
+            android:id="@+id/serial_number"
+            style="@style/Skeds.TextView.Equipment.Serial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_alignLeft="@id/name"
+            android:layout_alignRight="@id/name"/>
+
+    </RelativeLayout>
+</FrameLayout>

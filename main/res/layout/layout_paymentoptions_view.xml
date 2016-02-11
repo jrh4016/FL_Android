@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sked="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_repeating_stripes"
+    android:orientation="vertical" >
+
+    <com.skeds.android.phone.business.Custom.Header
+        android:id="@+id/activity_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        sked:back_button="1"
+        sked:left_button_type="0"
+        sked:nav_type="0"
+        sked:right_button_type="0"
+        sked:user_button="1" />
+
+    <!-- If their layout view is too small -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/activity_payment_options_button_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="35dp"
+                android:focusable="true"
+                android:src="@drawable/custom_button_cash" />
+
+            <ImageView
+                android:id="@+id/activity_payment_options_button_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:src="@drawable/custom_button_check" />
+
+            <EditText
+                android:id="@+id/activity_payment_options_edittext_check_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:background="@drawable/textbox_standard"
+                android:hint="Check Number"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textSize="16sp" />
+            
+            <ImageView
+                android:id="@+id/activity_payment_options_button_debit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:focusable="true"
+                android:src="@drawable/custom_button_debit" />
+
+            <ImageView
+                android:id="@+id/activity_payment_options_button_credit_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:focusable="true"
+                android:src="@drawable/custom_button_credit_card" />
+
+            <ImageView
+                android:id="@+id/activity_payment_options_button_bill_later"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:focusable="true"
+                android:src="@drawable/custom_button_bill_later" />
+
+            <ImageView
+                android:id="@+id/activity_payment_options_button_prepaid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:focusable="true"
+                android:src="@drawable/custom_button_prepaid" />
+            
+            <CheckBox
+                android:id="@+id/activity_payment_options_bill_later"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bill Later"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:clickable="false"
+                android:visibility="gone"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

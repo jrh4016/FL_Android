@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:sked="http://schemas.android.com/apk/res/com.skeds.android.phone.business"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:background="@drawable/background_repeating_stripes"
+	>
+	
+	<com.skeds.android.phone.business.Custom.Header
+		android:id="@+id/activity_header"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:layout_span="2"
+        android:paddingBottom="6px"
+        
+        sked:left_button_type="0"
+        sked:right_button_type="0"
+        sked:nav_type="0"
+       	sked:user_button="1"
+       	
+       	
+       	sked:back_button="1"
+       	/>
+	
+	<EditText
+	    android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/textbox_standard"
+		android:paddingTop="4dp"
+		android:paddingBottom="4dp"
+		android:paddingLeft="4dp"
+		android:layout_marginLeft="4dp"
+		android:layout_marginRight="4dp"
+		android:layout_marginBottom="6dp"
+		
+		android:hint="search by description"
+		android:textColor="#000000"
+		android:textSize="16dp"
+		android:id="@+id/activity_pricebook_list_edittext_search"
+		/>
+	
+	<LinearLayout
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_weight="1"
+    	android:paddingLeft="6dp"
+    	android:paddingRight="6dp"
+    	android:paddingBottom="6dp"
+    	android:weightSum="1"
+    	>
+    	<RelativeLayout 
+    		android:layout_width="fill_parent"
+    		android:layout_height="fill_parent"
+    		android:layout_marginLeft="4dp"
+    		android:layout_marginRight="4dp"
+    		>
+    	
+    		<TextView 
+    			android:layout_width="fill_parent"
+    			android:layout_height="wrap_content"
+    			android:background="@drawable/textbox_standard"
+    			android:gravity="center"
+    			android:paddingTop="4dp"
+    			android:paddingBottom="4dp"
+    			
+    			android:text="No Items"
+    			android:textStyle="bold"
+    			android:textColor="#000000"
+    			android:textSize="16dp"
+    			android:id="@+id/activity_pricebook_list_textview_no_items"
+    			/>
+    		
+    		
+    		
+    		<ListView
+    		    android:id="@+id/activity_pricebook_list_listview_pricebook"
+		    	android:layout_width="fill_parent"
+		    	android:layout_height="fill_parent"
+		    	android:layout_weight="1"
+		    	android:fadingEdge="none"
+		    	android:background="@android:color/transparent"
+		    	/>
+   		</RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

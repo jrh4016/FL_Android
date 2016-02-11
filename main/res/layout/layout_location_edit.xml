@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sked="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_repeating_stripes"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/custom_background_gradient_blue"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:clickable="true"
+            android:src="@drawable/action_bar_button_back" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:background="#00000000"
+            android:clickable="false"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:text="Edit Location"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:src="@drawable/action_bar_delim_left" />
+
+        <TextView
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:background="#00000000"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="Submit"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="8dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" >
+
+            <!-- Location Name -->
+
+            <TextView
+                style="@style/DialogLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location Name" />
+
+            <EditText
+                android:id="@+id/input_location_name"
+                style="@style/DialogInputline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="enter location name"
+                android:inputType="textCapWords|textNoSuggestions"
+                android:singleLine="true" />
+
+            <!-- Addresses -->
+
+            <TextView
+                style="@style/DialogLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address1" />
+
+            <EditText
+                android:id="@+id/input_address1"
+                style="@style/DialogInputline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="address"
+                android:inputType="textPostalAddress"
+                android:singleLine="true" />
+
+            <TextView
+                style="@style/DialogLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:text="Address2" />
+
+            <EditText
+                android:id="@+id/input_address2"
+                style="@style/DialogInputline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="address"
+                android:inputType="textPostalAddress"
+                android:singleLine="true" />
+
+            <!-- City -->
+
+            <TextView
+                style="@style/DialogLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="City" />
+
+            <EditText
+                android:id="@+id/input_city"
+                style="@style/DialogInputline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="enter city"
+                android:inputType="textCapWords|textNoSuggestions"
+                android:singleLine="true" />
+
+            <!-- State -->
+
+            <TextView
+                android:id="@+id/location_province_label"
+                style="@style/DialogLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Province" />
+
+            <Spinner
+                android:id="@+id/spinner_province"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbox_standard"
+                android:entries="@array/can_provinces_full"
+                android:prompt="@string/province" />
+
+            <!-- ZIP -->
+
+            <TextView
+                android:id="@+id/location_zip_label"
+                style="@style/DialogLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Postal Code" />
+
+            <EditText
+                android:id="@+id/input_zipcode"
+                style="@style/DialogInputline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="6"
+                android:maxLength="10"
+                android:hint="enter code"
+                android:singleLine="true" />
+
+            <!-- Phones -->
+
+            <TextView
+                style="@style/DialogLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone1" />
+
+            <EditText
+                android:id="@+id/input_phone1"
+                style="@style/DialogInputline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="phone 1"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:singleLine="true" />
+
+            <TextView
+                style="@style/DialogLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone1 Type" />
+
+            <Spinner
+                android:id="@+id/spinner_phone1_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:background="@drawable/textbox_standard"
+                android:entries="@array/phone_types"
+                android:paddingLeft="2dp" />
+
+            <TextView
+                style="@style/DialogLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone1 Contact" />
+
+            <EditText
+                android:id="@+id/input_phone1_contact"
+                style="@style/DialogInputline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:hint="phone1 contact" />
+
+            <TextView
+                style="@style/DialogLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone2 " />
+
+            <EditText
+                android:id="@+id/input_phone2"
+                style="@style/DialogInputline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="phone 2"
+                android:inputType="numberDecimal"
+                android:singleLine="true" />
+
+            <TextView
+                style="@style/DialogLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone2 Type" />
+
+            <Spinner
+                android:id="@+id/spinner_phone2_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:background="@drawable/textbox_standard"
+                android:entries="@array/phone_types"
+                android:paddingLeft="2dp" />
+
+            <TextView
+                style="@style/DialogLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone2 Contact" />
+
+            <EditText
+                android:id="@+id/input_phone2_contact"
+                style="@style/DialogInputline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:hint="phone2 contact" />
+            
+            <TextView
+                style="@style/DialogLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email" />
+
+            <EditText
+                android:id="@+id/input_email"
+                style="@style/DialogInputline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:hint="email" />
+
+            <TextView
+                style="@style/DialogLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location Code" />
+
+            <EditText
+                android:id="@+id/input_code"
+                style="@style/DialogInputline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="location code"
+                android:inputType="textMultiLine"
+                android:maxLines="20" />
+
+            <!-- Descr. -->
+
+            <TextView
+                style="@style/DialogLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description" />
+
+            <EditText
+                android:id="@+id/input_description"
+                style="@style/DialogInputline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="location description"
+                android:inputType="textMultiLine"
+                android:maxLines="20" />
+
+            <TextView
+                android:id="@+id/btn_view_equipment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/custom_button_gray_small_wide"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:text="Equipment for Location"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

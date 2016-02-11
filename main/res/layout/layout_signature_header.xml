@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sked="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_repeating_stripes"
+    android:orientation="vertical" >
+
+    <com.skeds.android.phone.business.Custom.Header
+        android:id="@+id/activity_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_span="2"
+        android:paddingBottom="6px"
+        sked:back_button="1"
+        sked:left_button_type="0"
+        sked:nav_type="0"
+        sked:right_button_type="1"
+        sked:user_button="1" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:weightSum="1" >
+
+        <TableLayout
+            android:id="@+id/activity_signature_tablelayout_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="3dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/activity_signature_edittext_customer_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/textbox_standard"
+                    android:hint=" Enter customer name"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/activity_signature_button_reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/button_gray_small"
+                    android:focusable="true"
+                    android:text="Reset"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                
+                <TextView
+                    android:id="@+id/activity_signature_button_view_disclaimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/button_gray_small"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:text="View Disclaimer"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please Sign Below:"
+                android:textColor="#000000"
+                android:textSize="10sp" />
+        </TableLayout>
+    </LinearLayout>
+
+</LinearLayout>

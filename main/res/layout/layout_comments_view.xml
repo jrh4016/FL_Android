@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:sked="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_repeating_stripes"
+    >
+    
+    <com.skeds.android.phone.business.Custom.Header
+       	android:layout_width="fill_parent" 
+       	android:layout_height="wrap_content"
+       	android:id="@+id/activity_header"
+       	android:paddingBottom="6px"
+       	
+		sked:left_button_type="0"
+		sked:right_button_type="6"
+		sked:nav_type="0"
+       	sked:user_button="1"
+       	sked:back_button="1"
+       	/>
+    		
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			>
+			
+	    <com.handmark.pulltorefresh.library.PullToRefreshListView
+	        android:id="@+id/activity_comments_listview"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent"
+	    	android:layout_weight="1"
+	    	android:fadingEdge="none"
+	    	/>
+
+	   	<SlidingDrawer 
+    		android:layout_alignParentBottom="true"
+	    	android:layout_width="wrap_content" 
+	    	android:layout_weight="1"
+	    	android:id="@+id/activity_comments_slidingdrawer" 
+	    	android:content="@+id/activity_comments_slidingdrawer_linearlayout" 
+	    	android:handle="@+id/activity_comments_slidingdrawer_button"
+	    	android:padding="10dip" 
+	    	android:layout_height="150dip"
+	    	>
+	    	
+	    	<Button 
+	    		android:layout_width="0dp" 
+	    		android:layout_height="0dp" 
+	    		android:id="@+id/activity_comments_slidingdrawer_button"
+	    		/>
+			
+			<LinearLayout 
+				android:layout_width="wrap_content" 
+				android:id="@+id/activity_comments_slidingdrawer_linearlayout" 
+				android:orientation="vertical" 
+				android:gravity="center|top" 
+				android:padding="10dip" 
+				android:background="#526a83"
+				android:layout_height="wrap_content">
+				
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="#FFFFFF"
+					android:textSize="14sp"
+					android:textStyle="bold"
+					android:text="Enter Comment"
+					android:paddingBottom="3dp"
+					/>
+			
+				<LinearLayout
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					>	
+					<EditText	 
+						
+						android:id="@+id/activity_comments_edittext_comment"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:singleLine="false"
+						android:layout_weight="1"
+                        android:inputType="textCapSentences|textMultiLine"
+						android:maxLines="2"
+						/>
+				</LinearLayout>
+				
+				<LinearLayout
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:gravity="center"
+					>
+					
+					
+					<TextView
+						android:layout_marginBottom="6dp"
+						android:gravity="center"
+						android:id="@+id/activity_comments_button_save"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:background="@drawable/custom_button_save_comment"
+						android:textColor="#FFFFFF"
+						android:textSize="20sp"
+						android:textStyle="bold"
+						android:text="Submit Comment"
+						/>
+				</LinearLayout>
+			</LinearLayout>
+	    </SlidingDrawer>
+	</RelativeLayout>
+</LinearLayout>

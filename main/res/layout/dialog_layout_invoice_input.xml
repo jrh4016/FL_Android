@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/custom_background_gradient_white_upper">
+
+			
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:background="@android:color/transparent"
+		>
+
+	    <TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="6dp"
+			android:text="Add Invoice Number"
+			android:textColor="#7B7B7B"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			android:layout_marginLeft="4dp"
+			android:layout_marginRight="2dp"
+			android:paddingTop="4dp"
+			android:paddingBottom="4dp"
+			/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_marginTop="6dp"
+		>
+	    
+	    <View
+			android:layout_width="fill_parent"
+			android:layout_height="1dip"
+			android:background="#c6c6c6"
+			/>
+	</LinearLayout>
+	
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:paddingTop="6dp"
+		android:gravity="center"
+		android:layout_marginTop="6dp"
+		android:layout_marginBottom="12dp"
+		>
+	
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Invoice w/o No: "
+			android:textColor="#000000"
+			android:layout_marginLeft="4dp"
+			android:layout_marginRight="2dp"
+			/>
+		
+		<TextView 
+		    android:id="@+id/dialog_invoice_input_prefix_value"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="PRFX"
+			android:textColor="#000000"
+			android:layout_marginLeft="4dp"
+			android:layout_marginRight="4dp"
+			/>
+			
+		<EditText
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="right"
+			android:hint="invoice number"
+			android:id="@+id/dialog_invoice_input_edittext_value"
+			android:background="@drawable/textbox_standard"
+			>
+		</EditText>
+	</LinearLayout>
+	
+    <LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_marginTop="6dp"
+		>
+	    
+	    <View
+			android:layout_width="fill_parent"
+			android:layout_height="1dip"
+			android:background="#c6c6c6"
+			/>
+	</LinearLayout>
+	
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+
+		android:paddingLeft="2dp"
+		android:paddingRight="2dp"
+		android:paddingTop="4dp"
+		android:paddingBottom="4dp"
+		android:background="@drawable/custom_background_gradient_white_lower"
+		>
+	
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			android:layout_marginLeft="3dp"
+			android:focusable="true"
+			android:id="@+id/dialog_invoice_input_button_save"
+			android:text="Save"
+			android:textColor="#000000"
+			android:textStyle="bold"
+			android:textSize="12sp"
+			android:background="@drawable/custom_button_gray_small_wide"
+			android:layout_weight=".5"
+			android:gravity="center"
+			/>
+			
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight=".5"
+			android:layout_marginTop="4dp"
+			android:layout_marginLeft="3dp"
+			android:focusable="true"
+			android:id="@+id/dialog_invoice_input_button_cancel"
+			android:text="Cancel"
+			android:textColor="#000000"
+			android:textStyle="bold"
+			android:textSize="12sp"
+			android:background="@drawable/custom_button_gray_small_wide"
+			android:gravity="center"
+			/>
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_repeating_stripes"
+    >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+        <TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="right"
+			android:focusable="true"
+			android:layout_margin="5dp"
+			android:id="@+id/estimate_list_button_add"
+			android:text="Add Estimate"
+			android:textColor="#000000"
+			android:textStyle="bold"
+			android:textSize="12sp"
+			android:background="@drawable/custom_button_gray_small_wide"
+			/>
+    </LinearLayout>	
+    
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+		android:id="@+id/activity_estimate__list_listview_work_estimate"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	/>
+</LinearLayout>

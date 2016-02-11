@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sked="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_repeating_stripes"
+    android:orientation="vertical" >
+
+    <com.skeds.android.phone.business.Custom.Header
+        android:id="@+id/activity_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="6px"
+        sked:back_button="1"
+        sked:left_button_type="16"
+        sked:nav_type="0"
+        sked:right_button_type="9"
+        sked:user_button="1" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:fillViewport="true" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="6dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp" >
+
+                <!-- First section, customer information -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_item_standard_list_item"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/activity_estimate_textview_customer_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="Customer Name"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/activity_estimate_button_create_appointment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/button_gray_small"
+                            android:text="Create Appointment"
+                            android:textColor="#000000"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/activity_estimate_textview_customer_phone_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="3dp"
+                        android:text="(555) 555-5555"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/activity_estimate_textview_customer_email_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="3dp"
+                        android:text="email@business.com"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/activity_estimate_textview_customer_physical_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinner_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawSelectorOnTop="true"
+                    android:visibility="gone"
+                    android:prompt="@string/location" />
+
+                <TextView
+                    android:id="@+id/estimate_location_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="14dp"
+                    android:text="Location Address"
+                    android:textColor="@color/label_text"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/estimate_location_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="8dp"
+                        android:text="&lt;none>"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/estimate_location_button_edit"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/button_gray_small"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:text="Edit"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:textStyle="bold" >
+                    </TextView>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="14dp"
+                    android:text="@string/service_agreement"
+                    android:textColor="@color/label_text"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp" >
+
+                    <TextView
+                        android:id="@+id/estimate_agreement_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="8dp"
+                        android:text="&lt;none>"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/estimate_agreement_button_edit"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/button_gray_small"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:text="Edit"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:textStyle="bold" >
+                    </TextView>
+                </LinearLayout>
+
+                <!-- Quantity, Details, Price, Total, Etc. [Labels Only] -->
+
+                <TableLayout
+                    android:id="@+id/activity_estimate_tablelayout_line_items"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:background="@drawable/custom_list_item_standard" >
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="2dp"
+                        android:weightSum="10" >
+
+                        <TextView
+                            android:id="@+id/activity_estimate_textview_line_item_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:text="No Items"
+                            android:gravity="center"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_span="7"
+                            android:layout_weight="1"
+                            android:background="#c6c6c6" >
+                        </View>
+                    </TableRow>
+                </TableLayout>
+
+                <!-- Add Line Item, Net Total, and Tax -->
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_item_standard_list_item"
+                    android:paddingLeft="8dp" >
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="2dp"
+                        android:weightSum="1" >
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:weightSum="1" >
+
+                            <TextView
+                                android:id="@+id/activity_estimate_button_add_line_item"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight=".5"
+                                android:background="@drawable/button_gray_small"
+                                android:focusable="true"
+                                android:text="Add Line Item"
+                                android:textColor="#000000"
+                                android:textSize="12sp"
+                                android:textStyle="bold" >
+                            </TextView>
+
+                            <TableLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_weight=".5"
+                                android:weightSum="1" >
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="1" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".5"
+                                        android:text="Subtotal"
+                                        android:textColor="#000000"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/activity_estimate_textview_net_total"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right"
+                                        android:layout_weight=".5"
+                                        android:gravity="right"
+                                        android:paddingLeft="16dp"
+                                        android:paddingRight="4dp"
+                                        android:text="$100.00"
+                                        android:textColor="#000000"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="1" >
+
+                                    <LinearLayout
+                                            android:id="@+id/tax_title_container"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical" >
+                                        </LinearLayout>
+                                        
+                                        <LinearLayout
+                                            android:id="@+id/tax_value_container"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_gravity="right"
+                                            android:orientation="vertical" >
+                                        </LinearLayout>
+                                </TableRow>
+                            </TableLayout>
+                        </RelativeLayout>
+                    </TableRow>
+                </TableLayout>
+
+                <!-- Total -->
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_item_standard_list_item"
+                    android:paddingLeft="8dp" >
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="2dp"
+                        android:weightSum="1" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_weight=".5"
+                            android:gravity="left"
+                            android:orientation="vertical"
+                            android:weightSum="1" >
+
+                            <TextView
+                                android:id="@+id/activity_estimate_button_add_discount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_marginTop="3dp"
+                                android:background="@drawable/button_gray_small"
+                                android:focusable="true"
+                                android:text="Add Discount"
+                                android:textColor="#000000"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_weight=".5"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:weightSum="1" >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".5"
+                                    android:text="Discount:"
+                                    android:textColor="#000000"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/activity_estimate_textview_discount_amount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".5"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="4dp"
+                                    android:text="$116.64"
+                                    android:textColor="#000000"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".5"
+                                    android:text="Total:"
+                                    android:textColor="#000000"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/activity_estimate_textview_total_amount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".5"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="4dp"
+                                    android:text="$116.64"
+                                    android:textColor="#000000"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_item_standard_list_item"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp"
+                    android:visibility="gone" >
+
+                    <CheckBox
+                        android:id="@+id/activity_estimate_checkbox_send_email_to_customer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="6dp"
+                        android:layout_weight=".85"
+                        android:paddingTop="4dp"
+                        android:text="Email estimate to customer"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:paddingLeft="14dp"
+                        android:text="Notes"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/activity_estimate_edittext_notes"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginRight="14dp"
+                        android:background="@drawable/textbox_standard"
+                        android:gravity="top"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:hint="Add notes for this estimate"
+                        android:minLines="4"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/activity_estimate_button_delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/button_gray_small"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="Delete Estimate"
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+
+        <SlidingDrawer
+            android:id="@+id/activity_estimate_slidingdrawer"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:content="@+id/activity_estimate_slidingdrawer_content"
+            android:handle="@+id/activity_estimate_slidingdrawer_button"
+            android:padding="10dp" >
+
+            <Button
+                android:id="@+id/activity_estimate_slidingdrawer_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/activity_estimate_slidingdrawer_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_background_gradient_dark_blue"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="18dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="18dp" >
+
+                <TextView
+                    android:id="@+id/activity_estimate_button_to_invoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_button_save_comment"
+                    android:gravity="center"
+                    android:text="Convert to Invoice"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/activity_estimate_button_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_button_save_comment"
+                    android:gravity="center"
+                    android:text="Save Estimate"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/activity_estimate_button_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_button_save_comment"
+                    android:gravity="center"
+                    android:text="Email Estimate"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/activity_estimate_button_appointment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_button_save_comment"
+                    android:gravity="center"
+                    android:text="Create Appointment"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/activity_estimate_button_invoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_button_save_comment"
+                    android:gravity="center"
+                    android:text="Create Invoice"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </SlidingDrawer>
+    </RelativeLayout>
+
+</LinearLayout>

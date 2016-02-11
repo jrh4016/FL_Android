@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ * Original Author: Ryan Bailey
+ -->
+<resources>
+    
+    <string-array name="agreement_statuses">
+        <item>Active</item>
+        <item>Pending</item>
+        <item>Cancelled</item>
+        <item>Expired</item>
+        <item>Closed</item>
+        <item>Credit Card Issue</item>
+    </string-array>
+    
+    <string-array name="agreement_statuses_lined_up">
+        <item>ACTIVE</item>
+        <item>PENDING</item>
+        <item>CANCELLED</item>
+        <item>EXPIRED</item>
+        <item>CLOSED</item>
+        <item>CREDIT_CARD_ISSUE</item>
+    </string-array>
+    
+    <string-array name="agreement_payment_types">
+        <item>Check</item>
+        <item>Cash</item>
+        <item>Credit Card</item>
+        <item>Prepaid</item>
+        <item>Debit</item>
+        <item>Bill Later</item>
+    </string-array>
+    
+    <string-array name="agreement_payment_types_lined_up">
+        <item>CHECK</item>
+        <item>CASH</item>
+        <item>CREDIT_CARD</item>
+        <item>PRE_PAID</item>
+        <item>DEBIT</item>
+        <item>BILL_LATER</item>
+    </string-array>
+
+	<string-array name="months">
+		<item>0</item>
+		<item>Jan</item>
+		<item>Feb</item>
+		<item>Mar</item>
+		<item>April</item>
+		<item>May</item>
+		<item>June</item>
+		<item>July</item>
+		<item>Aug</item>
+		<item>Sept</item>
+		<item>Oct</item>
+		<item>Nov</item>
+		<item>Dec</item>
+	</string-array>
+	
+	<string-array name="supported_countries">
+		<item>United States</item>
+		<item>Canada</item>
+	</string-array>
+
+	<string-array name="can_provinces_abr">
+		<item>AB</item>
+		<item>BC</item>
+		<item>MB</item>
+		<item>NB</item>
+		<item>NL</item>
+		<item>NT</item>
+		<item>NS</item>
+		<item>NU</item>
+		<item>ON</item>
+		<item>PE</item>
+		<item>QC</item>
+		<item>SK</item>
+		<item>YT</item>
+	</string-array>
+	
+	<string-array name="can_provinces_full">
+		<item>Alberta</item>
+		<item>British Columbia</item>
+		<item>Manitoba</item>
+		<item>New Brunswick</item>
+		<item>Newfoundland and Labrador</item>
+		<item>Northwest Territories</item>
+		<item>Nova Scotia</item>
+		<item>Nunavut</item>
+		<item>Ontario</item>
+		<item>Prince Edward Island</item>
+		<item>Quebec</item>
+		<item>Saskatchewan</item>
+		<item>Yukon</item>
+	</string-array>
+	
+	<string-array name="us_states_abr">
+		<item>AL</item>
+		<item>AK</item>
+		<item>AR</item>
+		<item>AZ</item>
+		<item>CA</item>
+		<item>CO</item>
+		<item>CT</item>
+		<item>DE</item>
+		<item>FL</item>
+		<item>GA</item>
+		<item>HI</item>
+		<item>ID</item>
+		<item>IL</item>
+		<item>IN</item>
+		<item>IA</item>
+		<item>KS</item>
+		<item>KY</item>
+		<item>LA</item>
+		<item>ME</item>
+		<item>MD</item>
+		<item>MA</item>
+		<item>MI</item>
+		<item>MN</item>
+		<item>MS</item>
+		<item>MO</item>
+		<item>MT</item>
+		<item>NE</item>
+		<item>NV</item>
+		<item>NH</item>
+		<item>NJ</item>
+		<item>NM</item>
+		<item>NY</item>
+		<item>NC</item>
+		<item>ND</item>
+		<item>OH</item>
+		<item>OK</item>
+		<item>OR</item>
+		<item>PA</item>
+		<item>RI</item>
+		<item>SC</item>
+		<item>SD</item>
+		<item>TN</item>
+		<item>TX</item>
+		<item>UT</item>
+		<item>VT</item>
+		<item>VA</item>
+		<item>WA</item>
+		<item>WV</item>
+		<item>WI</item>
+		<item>WY</item>
+	</string-array>
+	
+	<string-array name="us_states_full">
+		<item>Alabama</item>
+		<item>Alaska</item>
+		<item>Arkansas</item>
+		<item>Arizona</item> 
+		<item>California</item> 
+		<item>Colorado</item> 
+		<item>Connecticut</item> 
+		<item>Delaware</item> 
+		<item>Florida</item> 
+		<item>Georgia</item> 
+		<item>Hawaii</item> 
+		<item>Idaho</item> 
+		<item>Illinois</item> 
+		<item>Indiana</item> 
+		<item>Iowa</item> 
+		<item>Kansas</item> 
+		<item>Kentucky</item> 
+		<item>Louisiana</item> 
+		<item>Maine</item> 
+		<item>Maryland</item> 
+		<item>Massachusetts</item> 
+		<item>Michigan</item> 
+		<item>Minnesota</item> 
+		<item>Mississippi</item>
+		<item>Missouri</item> 
+		<item>Montana</item> 
+		<item>Nebraska</item> 
+		<item>Nevada</item>
+		<item>New Hampshire</item> 
+		<item>New Jersey</item>
+		<item>New Mexico</item>
+		<item>New York</item> 
+		<item>North Carolina</item> 
+		<item>North Dakota</item> 
+		<item>Ohio</item> 
+		<item>Oklahoma</item> 
+		<item>Oregon</item> 
+		<item>Pennsylvania</item> 
+		<item>Rhode Island</item> 
+		<item>South Carolina</item> 
+		<item>South Dakota</item> 
+		<item>Tennessee</item> 
+		<item>Texas</item> 
+		<item>Utah</item> 
+		<item>Vermont</item> 
+		<item>Virginia</item> 
+		<item>Washington</item> 
+		<item>West Virginia</item> 
+		<item>Wisconsin</item> 
+		<item>Wyoming</item> 
+	</string-array>
+	
+	
+	<string-array name="phone_types">
+	    <item>Home</item>
+	    <item>Work</item>
+	    <item>Cell</item>
+	    <item>Fax</item>
+	    <item>Other</item>
+	</string-array>
+	
+	<string-array name="equipment_condition">
+	    <item>Excellent</item>
+	    <item>Good</item>
+	    <item>Fair</item>
+	    <item>Poor</item>
+	</string-array>
+	
+	<string-array name="appointment_date_filter">
+	    <item>View All</item>
+	    <item>Today</item>
+	    <item>This Week</item>
+	    <item>Last Week</item>
+	    <item>This Month</item>
+	    <item>Last Month</item>
+	</string-array>
+	
+    <string-array name="partorder_statuses">
+        <item>To Be Ordered</item>
+        <item>Ordered</item>
+        <item>Arrived</item>
+        <item>Job Scheduled</item>
+        <item>Job Completed</item>
+        <item>Not Used</item>
+        <item>Damaged</item>
+        <item>Declined</item>
+        <item>Returned</item>
+    </string-array>
+    
+    <string-array name="partorder_statuses_xml">
+		<item>TO_BE_ORDERED</item>
+		<item>ORDERED</item>
+		<item>ARRIVED</item>
+		<item>JOB_SCHEDULED</item>
+		<item>JOB_COMPLETED</item>
+		<item>NOT_USED</item>
+		<item>DAMAGED</item>
+		<item>DECLINED</item>
+		<item>RETURNED</item>
+    </string-array>
+    
+    <string-array name="empty_not_available">
+        <item>N/A</item>
+    </string-array>
+</resources>

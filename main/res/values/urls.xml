@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Connection URLs -->
+    <string name="beta_base_url">https://ws-qa.fieldlocate.com/ws/</string>
+    <string name="prod_base_url">https://ws.fieldlocate.com/ws/</string>
+
+    <string name="customer_equipment_url">getcustomerequipment/%d</string>
+    <string name="delete_customer_equipment_url">deleteequipment/%d</string>
+    <string name="update_customer_equipment_url">editequipmentdetails/%d</string>
+    <string name="add_customer_equipment_url">addequipment/%d</string>
+    
+    <string name="powerlogin_url">powerlogin.htm</string>
+    <string name="change_password_url">changepassword/%d</string>
+    <string name="get_all_countries_url">getallcountries/%d</string>
+    
+    <string name="upload_document_url">uploaddocument/%d</string>
+    <string name="upload_photo_url">uploadphoto/%d</string>
+    <string name="upload_mobile_log_url">uploadmobilelog/%d</string>
+
+</resources>

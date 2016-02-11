@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:sked="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.skeds.android.phone.business.Custom.Header
+        android:id="@+id/activity_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        sked:user_button="1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/activity_dashboard_button_my_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/activity_dashboard_button_my_hours"
+            android:background="@drawable/btn_my_schedule"/>
+
+        <Button
+            android:id="@+id/activity_dashboard_button_my_hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_time_clock"/>
+
+        <Button
+            android:id="@+id/activity_dashboard_button_customers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/activity_dashboard_button_my_hours"
+            android:background="@drawable/btn_customers"/>
+
+        <Button
+            android:id="@+id/activity_dashboard_button_invoices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_dashboard_button_my_schedule"
+            android:layout_alignTop="@+id/activity_dashboard_button_pricebook"
+            android:layout_alignLeft="@id/activity_dashboard_button_my_schedule"
+            android:layout_alignRight="@id/activity_dashboard_button_my_schedule"
+            android:background="@drawable/btn_invoices"/>
+
+        <Button
+            android:id="@+id/activity_dashboard_button_pricebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_dashboard_button_my_hours"
+            android:layout_alignLeft="@id/activity_dashboard_button_my_hours"
+            android:layout_alignRight="@id/activity_dashboard_button_my_hours"
+            android:background="@drawable/btn_pricebook"/>
+
+        <Button
+            android:id="@+id/activity_dashboard_button_part_orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_dashboard_button_my_hours"
+            android:layout_alignTop="@+id/activity_dashboard_button_pricebook"
+            android:layout_alignLeft="@id/activity_dashboard_button_customers"
+            android:layout_alignRight="@id/activity_dashboard_button_customers"
+            android:background="@drawable/btn_part_orders"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="#666666"
+            android:layout_marginTop="14dp"
+            android:layout_below="@+id/activity_dashboard_button_pricebook"/>
+
+        <TextView
+            android:id="@+id/appt_label"
+            style="@style/Skeds.TextView.Dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:layout_below="@+id/divider"
+            android:background="@drawable/custom_shape_darkgradient_background"
+            android:text="@string/textview_string_upcoming_appointments"/>
+
+        <View
+            android:id="@+id/divider_pull"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="#666666"
+            android:layout_below="@id/appt_label"/>
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/dashboard_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E6E6E6"
+            android:layout_below="@+id/divider_pull"/>
+    </RelativeLayout>
+
+    <!-- Objects for current status -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:gravity="center_vertical"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp">
+
+        <TextView
+            android:id="@+id/activity_dashboard_textview_update_application"
+            style="@style/Skeds.TextView.Dashboard.Update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/update_available"
+            android:visibility="visible"/>
+
+        <!-- Is used inside the code to hide it if necessary -->
+        <LinearLayout
+            android:id="@+id/activity_dashboard_linearlayout_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/activity_dashboard_imageview_status_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+                android:src="@drawable/dash_status_none"
+                android:contentDescription="@string/desc_dashboard_update_image"/>
+
+            <TextView
+                android:id="@+id/activity_dashboard_textview_status"
+                style="@style/Skeds.TextView.Dashboard.Technician"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"/>
+
+            <TextView
+                android:id="@+id/activity_dashboard_textview_technician_name"
+                style="@style/Skeds.TextView.Dashboard.Technician"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

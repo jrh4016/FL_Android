@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@drawable/custom_background_gradient_white_upper">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Skeds.TextView.Dialog.Header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="2dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"/>
+
+    <View
+        android:id="@+id/divider_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="#c6c6c6"/>
+
+    <!--<ViewStub-->
+    <!--android:id="@+id/view_stub"-->
+    <!--android:inflatedId="@+id/view_stub"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"/>-->
+
+    <ViewStub
+        android:id="@+id/view_stub"
+        android:inflatedId="@+id/view_stub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="#c6c6c6"/>
+
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="4dp"
+        android:background="@drawable/custom_background_gradient_white_lower">
+
+        <Button
+            android:id="@+id/button_positive"
+            style="@style/Skeds.Button.Dialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"/>
+
+        <!-- Commented while we do not redesign the dialogs -->
+        <!--<View-->
+        <!--android:id="@+id/negative_neutral_divider"-->
+        <!--android:layout_width="@dimen/divider_height"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#c6c6c6"/>-->
+
+        <Button
+            android:id="@+id/button_neutral"
+            style="@style/Skeds.Button.Dialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <!-- Commented while we do not redesign the dialogs -->
+        <!--<View-->
+        <!--android:id="@+id/neutral_positive_divider"-->
+        <!--android:layout_width="@dimen/divider_height"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#c6c6c6"/>-->
+
+        <Button
+            android:id="@+id/button_negative"
+            style="@style/Skeds.Button.Dialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Skeds"/>
+
+    <style name="Skeds.TextView"/>
+
+    <style name="Skeds.TextView.Login">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Skeds.TextView.Login.Edit">
+        <item name="android:ems">10</item>
+        <item name="android:background">@drawable/tablet_login_pass_field</item>
+    </style>
+
+    <style name="Skeds.TextView.Disclaimer">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:maxWidth">500dp</item>
+        <item name="android:lines">4</item>
+    </style>
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/custom_list_item_standard" >
+
+        <ImageView
+            android:id="@+id/on_truck_added_button_add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:padding="15dp"
+            android:src="@drawable/icon_add_on_truck" />
+
+        <TextView
+            android:id="@+id/on_truck_added_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/on_truck_added_button_add"
+            android:text="New Manufacturer"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>

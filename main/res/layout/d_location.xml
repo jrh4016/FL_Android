@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:background="@drawable/custom_background_gradient_white_upper">
+
+    <TextView
+        android:id="@+id/header"
+        style="@style/Skeds.TextView.Dialog.LocationCall.Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="4dp"
+        android:layout_gravity="center"
+        android:text="@string/dialog_body_user_log_out"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#c6c6c6"/>
+
+    <TextView
+        android:id="@+id/body"
+        style="@style/Skeds.TextView.Dialog.LocationCall.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="12dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/phone1"
+        style="@style/Skeds.TextView.Dialog.LocationCall.Phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/phone2"
+        style="@style/Skeds.TextView.Dialog.LocationCall.Phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/edit"
+        style="@style/Skeds.TextView.Dialog.LocationCall.Phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#c6c6c6"
+        android:layout_marginTop="6dp"/>
+</LinearLayout>

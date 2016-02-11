@@ -1,0 +1,57 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	android:background="@drawable/custom_list_item_standard"
+	>
+	
+	<TableLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		>
+		
+		<TableRow
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			>
+			<TextView
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/commentRowTextPosterName"
+				android:textSize="14sp"
+				android:textStyle="bold"
+				android:textColor="#000000">
+			</TextView>
+		</TableRow>
+		
+		<TableRow
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/commentRowTextComment"
+				android:textSize="12sp"
+				android:singleLine="false"
+				android:textColor="#000000">
+			</TextView>
+		</TableRow>
+		
+		<TableRow
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			>
+			<TextView
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/commentRowTextTimestamp"
+				android:textSize="10sp"
+				android:textStyle="italic"
+				android:textColor="#000000">
+			</TextView>
+		</TableRow>
+	</TableLayout>
+</LinearLayout>

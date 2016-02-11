@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:background="@drawable/custom_background_gradient_white_upper">
+
+    <EditText
+        android:id="@+id/text"
+        style="@style/Skeds.TextView.Dialog.CustomerEquipment.Service.Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="18dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="12dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="4dp"
+        android:gravity="top"
+        android:hint="@string/dialog_body_service_record_hint"
+        android:background="@drawable/textbox_standard"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            style="@style/Skeds.TextView.Dialog.CustomerEquipment.Service.Condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_body_service_record_condition"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            style="@style/Skeds.TextView.Dialog.CustomerEquipment.Service.Condition"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:drawSelectorOnTop="true"
+            android:background="@drawable/textbox_standard"
+            android:entries="@array/equipment_condition"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/icon" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#32B2DF"
+            android:textSize="20sp"
+            android:text="Do you like our app?" />
+
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#32B2DF"
+        />
+
+    <TextView
+        android:id="@+id/activity_estimate_text_tax_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:text="If you like our app, please Rate Us in Google Play" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/rate_us_button_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginTop="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:clickable="true"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            android:text="No, thank you!" />
+
+        <TextView
+            android:id="@+id/rate_us_button_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:padding="10dp"
+            android:clickable="true"
+            android:layout_marginTop="0.5dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            android:text="Yes!" />
+
+    </LinearLayout>
+
+</LinearLayout>
