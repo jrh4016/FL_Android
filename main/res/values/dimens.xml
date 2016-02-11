@@ -1,9 +1,0 @@
-<resources>
-    <dimen name="pull_to_refresh_bounce">40dip</dimen>
-    <dimen name="partorder_qty_cell_w">40dp</dimen>
-    <dimen name="partorder_price_cell_w">62dp</dimen>
-    <dimen name="partorder_status_cell_w">80dp</dimen>
-
-    <dimen name="divider_height">2dp</dimen>
-    <dimen name="divider_width">1dp</dimen>
-</resources>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="color_equipment_name">#ff000000</color>
-    <color name="color_equipment_serial_number">#ff808080</color>
-
-    <color name="swipe_to_dismiss_bg">#ff454545</color>
-</resources>
